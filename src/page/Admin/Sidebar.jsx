@@ -20,7 +20,7 @@ import { MdOutlinePendingActions } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
 const AdminSidebar = ({ isopen , onSidebarClose}) => {
-  const [isExpanded, setIsExpanded] = useState(true);
+  const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
   const location = useLocation();
