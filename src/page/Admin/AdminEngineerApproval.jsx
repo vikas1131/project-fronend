@@ -37,12 +37,16 @@ const AdminEngineerApproval = () => {
           key={engineer._id}
           className="bg-white p-6 shadow-md rounded-lg border border-gray-300 hover:shadow-lg transition-all duration-300"
         >
-          <h2 className="text-xl font-semibold">{engineer?.name}</h2><hr /><br />
-          <p className="text-gray-600">Email: {engineer.email}</p>
-          <p className="text-gray-600">Phone: {engineer.phone}</p>
-          <p className="text-gray-600">Specialization: {engineer.specialization}</p>
-          <p className="text-gray-500">Address: {engineer.address}</p>
-          <div className="flex flex-wrap justify-center sm:justify-start gap-20 mt-4">
+           <div className="flex-grow">
+    <h2 className="text-xl font-semibold">{engineer?.name}</h2>
+    <hr /><br />
+    <p className="text-gray-600">Email: {engineer.email}</p>
+    <p className="text-gray-600">Phone: {engineer.phone}</p>
+    <p className="text-gray-600">Specialization: {engineer.specialization}</p>
+    <p className="text-gray-500 break-words">{engineer.address}</p>
+  </div>
+
+  <div className="flex flex-wrap justify-center sm:justify-start gap-4 mt-4">
             <button
               onClick={() => handleApproval(engineer.email, true)}
               disabled={engineer.isEngineer}

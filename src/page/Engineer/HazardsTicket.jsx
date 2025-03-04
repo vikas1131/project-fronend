@@ -38,14 +38,14 @@ const TicketForm = () => {
 
     try {
       await dispatch(HazardsTicket(formData)).unwrap();
-      toast.success("Ticket submitted successfully!");
+      toast.success("Hazard submitted successfully!");
 
       setTimeout(() => {
         navigate("/engineer/Hazards"); // Redirect to Hazards page
       }, 1000);
     } catch (err) {
       console.error("Failed to submit ticket:", err);
-      toast.error("Failed to submit ticket. Try again.");
+      toast.error("Failed to submit hazard. Try again.");
     }
   };
 

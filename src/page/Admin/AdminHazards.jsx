@@ -86,7 +86,7 @@ const AdminHazards = () => {
   }
 
   return (
-    <div className="p-6 bg-gray-100 min-h-screen mt-16">
+    <div className="p-6 bg-gray-100 min-h-screen mt-6">
       <div className="bg-white shadow-md p-6 mb-6">
         <div className="flex justify-between items-center max-w-7xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-800">Hazards Tasks</h1>
@@ -100,7 +100,7 @@ const AdminHazards = () => {
 
         <input
           type="text"
-          placeholder="Search by hazard type"
+          placeholder="Search by pincode..."
 
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}

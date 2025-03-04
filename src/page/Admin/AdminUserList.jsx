@@ -54,7 +54,7 @@ const AdminUserList = () => {
      
       
       <div className="p-4 sm:p-6 lg:p-8">
-        <h1 className="text-2xl font-bold text-gray-800 mb-6">All Users</h1>
+        <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-6">All Users</h1>
         
         <div className="mb-6">
           <input
