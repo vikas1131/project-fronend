@@ -279,7 +279,7 @@ export const HazardsTicket = createAsyncThunk(
     try {
       console.log("ticket Data", ticketData);
       const response = await axios.post(
-        'https://localhost:8000/api/hazards/addNewHazard',
+        'https://34.230.191.102:8000/api/hazards/addNewHazard',
         ticketData,
         {
           headers: {

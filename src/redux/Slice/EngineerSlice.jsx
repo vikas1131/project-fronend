@@ -92,7 +92,7 @@ export const fetchEngineerProfiledata = createAsyncThunk(
     console.log(`updatedData inside fetchUpdateEngineerProfile: ${updatedData}`);
     try {
       const response = await axios.patch(
-        `https://localhost:8000/api/updateProfile/engineer/3`, 
+        `https://34.230.191.102:8000/api/updateProfile/engineer/3`, 
         updatedData, 
         {
           headers: {

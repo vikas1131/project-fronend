@@ -24,7 +24,7 @@ export const markAsRead = createAsyncThunk(
   async (notificationId, { rejectWithValue }) => {
     try {
       console.log("notification marked as read");
-      await axios.patch(`https://localhost:8003/api/notifications/updateNotification/${notificationId}`, { isRead: true } );
+      await axios.patch(`https://34.230.191.102:8003/api/notifications/updateNotification/${notificationId}`, { isRead: true } );
       return notificationId ; // Return the ID to update state
     } catch (error) {
       return rejectWithValue(error.response.data);
