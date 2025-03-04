@@ -185,7 +185,7 @@ describe('ticketSlice Thunk logic', () => {
       expect(result.payload).toEqual(mockHazardResponse);
 
       expect(axios.post).toHaveBeenCalledWith(
-        'https://34.230.191.102:8000/api/hazards/addNewHazard',
+        'https://54.88.31.60:8000/api/hazards/addNewHazard',
         hazardData,
         {
           headers: {
