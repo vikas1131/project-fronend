@@ -116,16 +116,7 @@ const EngineerProfile = () => {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-blue-900 mb-6">Engineer Profile</h1>
           <div className="relative inline-block group">
-            {/* 
-            <img
-              src={engineer?.avatar || "/path/to/default-avatar.jpg"}
-              className="w-32 h-32 rounded-full border-4 border-white shadow-lg"
-              alt="Profile"
-            />
-            <button className="absolute bottom-0 right-0 bg-blue-500 p-2 rounded-full hover:bg-blue-600">
-              <Camera className="w-5 h-5 text-white" />
-            </button>
-            */}
+           
           </div>
         </div>
 
@@ -213,8 +204,9 @@ const EngineerProfile = () => {
             )}
 
             {activeTab === "Update" && (
-              <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-6">
-                <div >
+            <form onSubmit={handleSubmit}  className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+
+               
                   <InputField
                     label="Full Name"
                     value={engineer.name}
@@ -247,8 +239,7 @@ const EngineerProfile = () => {
                     }
                     icon={<MapPin className="w-4" />}
                   />
-                </div>
-
+              
                 {/* Availability Section - checkboxes */}
                 <div className="md:col-span-2">
                   <h3 className="text-sm font-medium text-gray-700">Availability</h3>
@@ -312,13 +303,14 @@ const ProfileField = ({ label, value, icon }) => (
 );
 
 const InputField = ({ label, icon, ...props }) => (
-  <div className="space-y-2">
+  <div className="space-y-2 w-full">
     <label className="text-sm font-medium text-gray-700 flex items-center gap-2">
       {icon} {label}
     </label>
-    <input className="w-full px-4 py-3 rounded-lg border bg-white/50" {...props} />
+    <input className="w-full px-2 py-3 rounded-lg border bg-white/50" {...props} />
   </div>
 );
+
 
 const SubmitButton = ({ success }) => (
   <div className="relative">

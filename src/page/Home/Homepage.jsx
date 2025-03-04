@@ -95,7 +95,7 @@ const LandingPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight">
-              <span className="block mb-4">Telecom Infrastructure</span>
+              <span className="block mb-4">Telecom Service</span>
               <span className="text-blue-600">Field Operations Platform</span>
             </h1>
             

@@ -5,7 +5,7 @@ const Card = ({
   icon,
   title,
   value,
-  onClick,
+  
 }) => {
 
 
@@ -14,8 +14,8 @@ const Card = ({
 
   return (
     <div
-      onClick={onClick}
-      className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer border border-gray-100 dark:bg-gray-800 dark:border-gray-700"
+    
+      className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300  border border-gray-100 dark:bg-gray-800 dark:border-gray-700"
     >
       {/* Icon and trend section */}
       <div className="flex items-center justify-between mb-4">

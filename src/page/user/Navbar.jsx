@@ -21,9 +21,15 @@ const Navbar = ({ toggleSidebar}) => {
               bg-clip-text text-transparent hidden sm:block md:block">
               Telecom Services
         </h1>
-        <button className="md:hidden text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400" onClick={toggleSidebar}>
+        
+        <button className="md:hidden  flex gap-3 text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400" onClick={toggleSidebar}>
           <Menu size={24} />
+          
         </button>
+        <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 
+              bg-clip-text text-transparent sm:hidden">
+    TS
+</h1>
       </div>
 
       {/* Right side - Notifications, Theme Toggle, Profile */}

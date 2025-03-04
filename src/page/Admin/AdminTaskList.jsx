@@ -107,7 +107,7 @@ const AdminTaskList = () => {
 
 
       {/* Task Cards */}
-      <div className="flex flex-wrap gap-16  ml-10">
+      <div className="flex flex-wrap gap-16  ml-1">
         {filteredTasks.map((task) => (
           <AdminTaskCard key={task._id || task.id} task={task} />
         ))}

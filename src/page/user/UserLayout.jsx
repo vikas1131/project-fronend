@@ -48,8 +48,8 @@ const UserLayout = () => {
             className={`
               flex-1 overflow-y-auto p-4 transition-all duration-300
              dark:bg-gray-900
-              ${isSidebarExpanded ? 'ml-[50px]' : 'ml-[53px]'}  /* Adjust these values to match your Sidebar widths */
-              ml-2  lg:ml-14 /* On medium/small screens, remove the margin to overlay content */
+              ${isSidebarExpanded ? 'ml-[50px]' : 'ml-[20px]'}  /* Adjust these values to match your Sidebar widths */
+                lg:ml-14 /* On medium/small screens, remove the margin to overlay content */
             `}
           > 
             <Outlet />
