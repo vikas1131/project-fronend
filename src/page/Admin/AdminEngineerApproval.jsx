@@ -13,23 +13,20 @@ const AdminEngineerApproval = () => {
     dispatch(fetchAllEngineers()); // Fetch engineers who need approval
   }, [dispatch]);
 
-  const handleApproval = (engineerEmail, approve) => {
-    dispatch(approveEngineer({ engineerEmail, approve })).then(() => {
-        setTimeout(() => {
-            dispatch(fetchAllApprovedEngineers()); // Refresh approved engineers list
-            dispatch(fetchAllEngineers()); // Refresh pending engineers list
-        }, 500);
-    });
+  const handleApproval = async (engineerEmail, approve) => {
+    await dispatch(approveEngineer({ engineerEmail, approve }));
+    dispatch(fetchAllEngineers()); // This should be sufficient to refresh the list
   };
+  
 
   if (loading) return <div className="text-center text-gray-500"><Loading /></div>;
   if (error) return <div className="text-center text-red-500">{error}</div>;
   if (!Array.isArray(engineers) || engineers.length === 0) return <p className="text-center text-gray-500">No engineers available.</p>;
 
   return (
-    <div className="ml-12">
-    <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-6">New Engineers</h1>
-    <div className="p-4 mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+    <div>
+    <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-0 ml-2">New Engineers</h1>
+    <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
       {/* <AdminNavbar /> */}
 
       {engineers.map((engineer) => (

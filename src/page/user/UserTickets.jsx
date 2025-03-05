@@ -36,10 +36,10 @@ const UserTicketList = () => {
     return <div>Error: {error}</div>;
   }
 
-  if(tasks.length === 0) {
+  if(tasks?.length === 0) {
     return  <div className='top-24 justify-center  flex flex-col items-center'>
-    {/* <img src={Notasksimage} alt="No Tasks" className="w-72 h-30 " /> */}
-    {/* <p>No Tickets raised yet!</p> */}
+    {/* { <img src={Notasksimage} alt="No Tasks" className="w-72 h-30 " />} */}
+    {<p>No Tickets raised yet!</p>}
   </div>
   }
 

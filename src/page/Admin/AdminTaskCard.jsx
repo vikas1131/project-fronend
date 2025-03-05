@@ -130,7 +130,7 @@ const AdminTaskCard = ({ task = {} }) => {
       <div className="p-4 border-b">
         <div className="flex justify-between items-center">
           <h3 className="text-lg font-semibold">
-            {task.serviceType}
+            {task.serviceType.replace(/^\w/, (c) => c.toUpperCase())}
           </h3>
           <span className={getStatusStyle(task.status)}>{task.status}</span>
           <span className={getPriorityStyle(task.priority)}>

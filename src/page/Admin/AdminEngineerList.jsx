@@ -40,9 +40,9 @@ const AdminEngineerList = () => {
   });
 
   return (
-    <div className="p-4 mt-8 bg-gray 100">
+    <div className="p-4 mt-2 bg-gray 100">
       
-      <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-6">Approved Engineers</h1>
+      <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-4">Approved Engineers</h1>
 
       <div className="relative mb-6">
         
@@ -51,7 +51,7 @@ const AdminEngineerList = () => {
           placeholder="Search engineers by name..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)} // Updates instantly, but filtering is debounced
-          className="w-full px-5 ml-4 py-2 pl-12 pr-4 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-full px-5 py-2 pl-12 pr-4 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         />
         <Search
           size={24}
@@ -63,7 +63,7 @@ const AdminEngineerList = () => {
         <select
           value={SpecialistFilter}
           onChange={(e) => SetSpecialistFilter(e.target.value)}
-          className="w-40 px-4 py-2 ml-4 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          className="w-40 px-4 py-2 ml-0 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
         >
           <option value="">Specialization</option>
           <option value="fault">Faults</option>
@@ -71,14 +71,14 @@ const AdminEngineerList = () => {
         </select>
       </div>
 
-      <div className="p-4 mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
         {filteredEngineer.map((engineer) => (
           <div
             key={engineer._id}
             className="bg-white p-4 shadow-md rounded-lg cursor-pointer hover:shadow-lg"
             // onClick={() => navigate(`/admin/engineer/${engineer.email}`)} 
           >
-            <h2 className="text-lg font-semibold">{engineer.name}</h2><hr /><br />
+            <h2 className="text-lg font-semibold pb-2 ">{engineer.name}</h2><hr /><br />
             <p className="text-gray-500">Email: {engineer.email}</p>
             <p className="text-gray-500">Phone: {engineer.phone}</p>
             <p className="text-gray-500">Specialization: {engineer.specialization}</p>

@@ -51,10 +51,10 @@ const AdminTaskList = () => {
   });
 
   return (
-    <div className="space-y-6 p-4 mt-25 ml-6 pl-3 mt-12">
-      <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-6">All Tasks</h1>
+    <div className="space-y-6 p-4 mt-2 pl-3 mt-2">
+      <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-2">All Tasks</h1>
       {/* Search Bar */}
-      <div className="relative mb-6">
+      <div className="relative mb-2">
         <input
           type="text"
           placeholder="Search tasks by ..."
@@ -107,7 +107,7 @@ const AdminTaskList = () => {
 
 
       {/* Task Cards */}
-      <div className="flex flex-wrap gap-16  ml-1">
+      <div className="flex flex-wrap gap-16">
         {filteredTasks.map((task) => (
           <AdminTaskCard key={task._id || task.id} task={task} />
         ))}
