@@ -49,6 +49,7 @@ const AssignedTasks = ({ isExpanded }) => { // Accepts isExpanded from Sidebar
     };
 
     const handleUpdateStatus = () => {
+        const email = sessionStorage.getItem('email');
         if (selectedTask && newStatus) {
             dispatch(updateTaskStatus({ taskId: selectedTask._id, status: newStatus }));
     
