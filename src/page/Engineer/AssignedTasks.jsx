@@ -53,16 +53,17 @@ const AssignedTasks = ({ isExpanded }) => { // Accepts isExpanded from Sidebar
             dispatch(updateTaskStatus({ taskId: selectedTask._id, status: newStatus }));
     
         // Send notification to task's owner when status is deferred
+        console.log('user update status: ', user)
         console.log( "sdassadasd",{ 
             taskID: selectedTask._id,  // Ensure this field exists in your task object
-            messageTOSend: `Task with ID: ${selectedTask._id} has been deferred by ${user.email}`, 
+            messageTOSend: `Task with ID: ${selectedTask._id} has been deferred by ${email}`, 
             isRead: false 
         }) 
             if (newStatus === "deferred" || newStatus === "failed") {
                 const notificationPayload = {
                     // Ensure this exists
                     email: "admin@gmail.com",
-                    message: `Task with ID "${selectedTask._id}" has been "${newStatus}" by "${user.email}"`,
+                    message: `Task with ID "${selectedTask._id}" has been "${newStatus}" by "${email}"`,
                     isRead: false,
                 };
                 dispatch(sendNotification(notificationPayload))

@@ -43,7 +43,7 @@ const AdminTaskList = () => {
   // Filter tasks based on debounced search term
   const filteredTasks = tasks.filter(task => {
     //console.log("task priority:",task.priority)
-    const matchesSearchTerm = task.serviceType.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
+    const matchesSearchTerm = task.engineerEmail.toLowerCase().includes(debouncedSearchTerm.toLowerCase());
     const matchesStatusFilter = statusFilter ? task.status.toLowerCase() === statusFilter.toLowerCase() : true;
     //console.log("before priority:",task.priority)
     const matchesPriorityusFilter = priorityFilter ? task.priority === priorityFilter.toLowerCase() : true;
@@ -52,7 +52,7 @@ const AdminTaskList = () => {
 
   return (
     <div className="space-y-6 p-4 mt-25 ml-6 pl-3 mt-12">
-      <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-6">Approved Engineers</h1>
+      <h1 className="font-bold bg-white rounded-md text-2xl w-full p-3 mb-6">All Tasks</h1>
       {/* Search Bar */}
       <div className="relative mb-6">
         <input
