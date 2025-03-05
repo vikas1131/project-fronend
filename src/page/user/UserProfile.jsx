@@ -130,17 +130,17 @@ const UserProfile = () => {
                   <InputField
                     label="Full Name"
                     value={user.name}
-                    disabled
+                    onChange={(e) =>
+                      setUser({...user, name: e.target.value })
+                    }
                     icon={<User className="w-5 h-5" />}
                   />
                   <InputField
                     label="Email"
                     type="email"
                     value={user.email}
-                    onChange={(e) =>
-                      setUser({ ...user, email: e.target.value })
-                    }
-                    icon={<Mail className="w-5 h-5" />}
+                    disabled
+                    icon={<Mail className="w-5 h-5 text-gray-500" />}
                   />
                   {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>} {/* **Show email error** */}
                   <InputField
