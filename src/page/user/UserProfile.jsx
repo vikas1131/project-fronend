@@ -130,9 +130,7 @@ const UserProfile = () => {
                   <InputField
                     label="Full Name"
                     value={user.name}
-                    onChange={(e) =>
-                      setUser({ ...user, name: e.target.value })
-                    }
+                    disabled
                     icon={<User className="w-5 h-5" />}
                   />
                   <InputField

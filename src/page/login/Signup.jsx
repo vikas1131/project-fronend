@@ -276,19 +276,3 @@ function Signup() {
 
 export default Signup;
 
-// import "react-toastify/dist/ReactToastify.css";
-// import { ToastContainer, toast } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
-// toast.success("Ticket submitted successfully!");
-// toast.success("Ticket submitted successfully!");
-// <ToastContainer
-// position="top-right"
-// autoClose={5000}
-// hideProgressBar={false}
-// newestOnTop={false}
-// closeOnClick
-// rtl={false}
-// pauseOnFocusLoss
-// draggable
-// pauseOnHover
-// />

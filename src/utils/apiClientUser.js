@@ -4,9 +4,9 @@ import API_USER_URL from "../config/apiConfigUser";
 
 const apiClient = axios.create({
   baseURL: API_USER_URL,
-    //withCredentials: true, // Ensures cookies are sent with requests
+    //withCredentials: true, 
     headers: {
-      "Content-Type": "application/json", // Ensure JSON format
+      "Content-Type": "application/json", 
   },
 
 });
@@ -21,13 +21,13 @@ apiClient.interceptors.request.use((config) => {
         config.headers["Authorization"] = `Bearer ${token}`;
     }
     if (email) {
-      config.headers["X-User-Email"] = email; // Pass user email in headers
+      config.headers["X-User-Email"] = email; 
   }
   else {
     delete config.headers["X-User-Email"];
   }
   if (role) {
-      config.headers["X-User-Role"] = role; // Pass user role in headers
+      config.headers["X-User-Role"] = role; 
   }
   else {
     delete config.headers["X-User-Role"];
