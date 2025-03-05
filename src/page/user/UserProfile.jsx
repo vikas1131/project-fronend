@@ -136,7 +136,7 @@ const UserProfile = () => {
                     icon={<User className="w-5 h-5" />}
                   />
                   <InputField
-                    className="text-gray-300"
+                    className="text-gray-500"
                     label="Email"
                     type="email"
                     value={user.email}
