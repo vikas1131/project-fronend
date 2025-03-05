@@ -140,7 +140,7 @@ const UserProfile = () => {
                     type="email"
                     value={user.email}
                     disabled
-                    icon={<Mail className="w-5 h-5 text-gray-500" />}
+                    icon={<Mail className="w-5 h-5 text-gray-200" />}
                   />
                   {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>} {/* **Show email error** */}
                   <InputField
