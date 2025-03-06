@@ -8,7 +8,6 @@ export const submitTicket = createAsyncThunk(
   async (ticketData) => { 
     const { email, ...rest } = ticketData; // Extract email separately
     //console.log("ticketData inside submitTicket", ticketData);
-    
     try {
       const response = await apiClientUser.post(
         `/users/raiseTicket/${email}`, 

@@ -36,9 +36,14 @@ const TicketForm = () => {
   }
   setLoading(true);
   try {
-    const ticket = await dispatch(submitTicket({ ...ticketForm, email })); ;
-    const ticketData = ticket.payload.ticket.ticket
-    console.log("ahdkjfkaldsf", ticketData);
+    const response = await dispatch(submitTicket({ ...ticketForm, email }));
+    console.log("ahdkjfkaldsf", response.payload.ticket);
+    const ticketData = response?.payload?.ticket.ticket
+    
+
+    if (!ticketData) {
+      throw new Error("Ticket data is missing in the response");
+  }
     toast.success("Ticket submitted successfully!");
     
     // Reset form on success
@@ -49,10 +54,10 @@ const TicketForm = () => {
       pincode: "",
       city:"Bengaluru", 
     });
-    if (ticketData.engineerEmail) {
+    if (ticketData?.engineerEmail) {
       const notificationPayload = {
         // Ensure this exists
-        email: ticketData.engineerEmail,
+        email: ticketData?.engineerEmail,
         message: `Task ${ticketData._id} has been raised by ${ticketData.userEmail}`,
         isRead: false,
       };
@@ -137,6 +142,7 @@ const TicketForm = () => {
           }
           required
         >
+          <option value="Select">Select City</option>
           <option value="Bengaluru">Bengaluru</option>
           <option value="Mumbai">Mumbai</option>
           <option value="Chennai">Chennai</option>
