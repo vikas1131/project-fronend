@@ -15,6 +15,7 @@ function Signup() {
     phone: "",
     address: "",
     pincode: "",
+    city:"",
     password: "",
     securityQuestion: "",
     securityAnswer: "",
@@ -123,7 +124,7 @@ function Signup() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Left Side Fields */}
             <div>
-              {["name", "email", "phone", "address", "pincode"].map((field) => (
+              {["name", "email", "phone", "address","city", "pincode"].map((field) => (
                 <div className="mb-4" key={field}>
                   <label className="block text-lg font-medium mb-2">
                     {field.charAt(0).toUpperCase() + field.slice(1)}

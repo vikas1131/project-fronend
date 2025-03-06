@@ -11,7 +11,7 @@ export const validateEmail = (email) => {
   };
   
   export const validatePhoneNumber = (phone) => {
-    return /^(\+\d{1,3}[- ]?)?\d{10}$/.test(phone);
+    return /^(?:\+91[- ]?)?[6-9]\d{9}$/.test(phone);
   };
   
   export const validateUsername = (name) => {

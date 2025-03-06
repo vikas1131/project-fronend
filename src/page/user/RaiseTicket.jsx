@@ -47,6 +47,7 @@ const TicketForm = () => {
       address: "",
       description: "",
       pincode: "",
+      city:"Bengaluru", 
     });
     if (ticketData.engineerEmail) {
       const notificationPayload = {
@@ -126,6 +127,22 @@ const TicketForm = () => {
             required
           />
         </div>
+        <div>
+        <label className={labelStyles}>City</label>
+        <select
+          className={inputStyles}
+          value={ticketForm.city}
+          onChange={(e) =>
+            setTicketForm({ ...ticketForm, city: e.target.value })
+          }
+          required
+        >
+          <option value="Bengaluru">Bengaluru</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Chennai">Chennai</option>
+        </select>
+        </div>
+
 
         <div>
           <label className={labelStyles}>Pincode</label>
