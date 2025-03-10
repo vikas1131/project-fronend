@@ -1,4 +1,4 @@
-const API_NH_URL = "http://54.88.31.60:8003/api"; // Backend base URL
+const API_NH_URL = "http://localhost:8003/api"; // Backend base URL
 
 
 export default API_NH_URL;
